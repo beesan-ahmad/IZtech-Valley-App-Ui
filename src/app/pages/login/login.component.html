@@ -1,27 +1,37 @@
-<div class="login-container">
+<!DOCTYPE html>
+<html lang="ar">
 
-    <div class="login-left">
-        <img src="assets/images/sign in.png" alt="Illustration" class="login-image" />
-        <h1>مرحباً بك في موقع مهمتك</h1>
-      <p>مهمتك هو عبارة عن موقع الكتروني يساعدك في انجاز مهامك بسهولة</p>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>تسجيل الدخول</title>
+</head>
+
+<body>
+  <div class="container">
+    <div class="info">
+      <img src="assets/images/sign in.png" alt="Illustration" class="illustration">
+      <h1>مرحباً بك في موقع مهمتك</h1>
+      <p>مهمتك هو عبارة عن موقع الكتروني يساعدك في إنجاز مهامك بسهولة</p>
     </div>
-
-    <div class="login-right">
+    <div class="login-form">
       <h2>تسجيل الدخول</h2>
-      <form (ngSubmit)="onSubmit()">
-        <div class="form-group">
-          <label for="email">البريد الالكتروني</label>
-          <input type="email" id="email" [(ngModel)]="email" name="email" required />
+      <form>
+        <label for="email">البريد الالكتروني</label>
+        <input type="email" id="email" placeholder="example@gmail.com" required>
+
+        <label for="password">كلمة المرور</label>
+        <div class="password-container">
+          <input type="password" id="password" required>
+          <span class="toggle-password" onclick="togglePassword()">👁️</span>
         </div>
-        
-        <div class="form-group">
-          <label for="password">كلمة المرور</label>
-          <input type="password" id="password" [(ngModel)]="password" name="password" required />
-        </div>
-        <button type="submit">تسجيل الدخول</button>
+
         <a href="#">نسيت كلمة المرور؟</a>
-        <p>ليس لديك حساب؟ <a href="#">انشاء حساب</a></p>
+        <button type="submit">تسجيل الدخول</button>
+        <a href="#" class="create-account">ليس لديك حساب؟ إنشاء حساب</a>
       </form>
     </div>
   </div>
-  
+</body>
+
+</html>
