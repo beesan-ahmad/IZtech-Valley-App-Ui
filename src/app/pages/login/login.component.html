@@ -1,0 +1,27 @@
+<div class="login-container">
+
+    <div class="login-left">
+        <img src="assets/images/sign in.png" alt="Illustration" class="login-image" />
+        <h1>مرحباً بك في موقع مهمتك</h1>
+      <p>مهمتك هو عبارة عن موقع الكتروني يساعدك في انجاز مهامك بسهولة</p>
+    </div>
+
+    <div class="login-right">
+      <h2>تسجيل الدخول</h2>
+      <form (ngSubmit)="onSubmit()">
+        <div class="form-group">
+          <label for="email">البريد الالكتروني</label>
+          <input type="email" id="email" [(ngModel)]="email" name="email" required />
+        </div>
+        
+        <div class="form-group">
+          <label for="password">كلمة المرور</label>
+          <input type="password" id="password" [(ngModel)]="password" name="password" required />
+        </div>
+        <button type="submit">تسجيل الدخول</button>
+        <a href="#">نسيت كلمة المرور؟</a>
+        <p>ليس لديك حساب؟ <a href="#">انشاء حساب</a></p>
+      </form>
+    </div>
+  </div>
+  
