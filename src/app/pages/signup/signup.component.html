@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ar">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>نموذج التسجيل</title>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="right-side">
+            <img src="assets/images/sign up.png" alt="signup">
+            <h1>هيا لنبدء رحلتك سويا</h1>
+            <p>قم بانشاء حساب مجاني تماما في موقع مهمتك</p>
+            <p>و دعنا نرتب مهامك سويا</p>
+
+        </div>
+        <div class="left-side">
+            <h2>انشاء حساب</h2>
+
+            <form>
+                <div class="form-group">
+                    <label for="username">اسم المستخدم</label>
+                    <input type="text" id="username" name="username" placeholder="بيسان" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">البريد الإلكتروني</label>
+                    <input type="email" id="email" name="email" placeholder="example@gmail.com" required>
+                </div>
+                <div class="form-group password-input">
+                    <label for="password">كلمة المرور</label>
+                    <input type="password" id="password" name="password" placeholder="%*#@" required>
+                    <span class="toggle-password" onclick="togglePassword()">👁️</span>
+                </div>
+                <p>يجب أن تكون كلمة المرورعلى 8 رموز على الاقل</p>
+                <p>يجب أن تحتوي كلمة المرور على رموز وارقام</p>
+
+                <div class="form-group">
+                    <label for="upload"> الصورة الشخصية (اختياري)</label>
+                    <input type="file" id="upload" name="upload" accept="image/*" style="display: none;">
+                    <button type="button" class="upload-button"
+                        onclick="document.getElementById('upload').click()">ارفاق صورة</button>
+                </div>
+                <button type="submit" class="register-button">انشاء حساب</button>
+                <div class="login-prompt">
+                    <p>هل لديك حساب بالفعل؟ <a href="login.html">تسجيل الدخول</a></p>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        function togglePassword() {
+            const passwordInput = document.getElementById('password');
+            const type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
+            passwordInput.setAttribute('type', type);
+        }
+    </script>
+
+</body>
+
+</html>
